@@ -1,0 +1,34 @@
+.navbar {
+	background-color: #EEEEEE;
+	margin-right:30px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.navbar-inner {
+	margin:5px;
+	float:left;
+}
+
+.navbar-inner a{
+	margin-left: 15px;
+	color: black;
+	font-family: 'Acme';
+	
+	font-size: 1.5em;	
+}
+
+li {
+	display: inline;
+}
+
+#items {
+	/*font-family: 'Roboto';*/
+}
+
+#items a, #items li{
+	/*font-family: 'Roboto';*/
+}
+
+
+

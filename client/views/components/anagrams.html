@@ -1,0 +1,12 @@
+<template name="anagrams">
+    <h3>Anagrams for "<strong>{{userInput}}</strong>"</h3> 
+    {{#if all_anagram_items}}
+        <h4>
+	        {{#each all_anagram_items}}
+	            {{this.anagram}}
+	        {{/each}}
+        </h4>
+    {{else}}
+    	<h4>None found...</h4>
+    {{/if}}
+</template>

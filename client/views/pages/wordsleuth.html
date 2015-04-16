@@ -1,0 +1,94 @@
+<template name="wordsleuth">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Special+Elite|Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Slabo+27px|Roboto' rel='stylesheet' type='text/css'>
+        <title>WordSleuth</title>
+    </head>
+
+    <body>
+
+        <div id="headerArea">
+            {{> header}}
+        </div>
+
+
+
+        <div id="purposeArea">
+            <p>
+                An app to find anagrams, or other words, that can be made 
+                from the letters you provide...  
+            </p>
+        </div>
+
+        <div id="dictArea">
+            <p id="dictInfo"><u>Current Dictionary:</u> {{ dictionaryName }}</p>
+        </div>
+
+        <div id="searchArea" class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input id="input" type="text" 
+                    class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button  class="btn btn-default" 
+                            type="button">Go!</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 --> 
+        </div>
+
+        <div id="wordArea">
+            <p id="wordInfo"></p>
+        </div>
+
+        <div id="anagramsArea">
+            {{#if userInput}}
+                {{> anagrams}}
+            {{/if}}
+        </div>
+
+        <div id="subwordsArea">
+            {{#if userInput}}
+                {{> subwords}}
+            {{/if}}
+        </div>
+
+        <div id="footer">
+            {{> footer}}
+        </div>
+
+</body>
+
+</template>
+
+<!--<div id="selectDictionaryArea" class="dropdown">   
+              <select id="select_dictionary" class="selectpicker" onChange="setDictionary()">
+                <optgroup label="Webster's New International Dictionary, Second Edition">
+                  <option value="1">
+                    Webster's Single words – 234,936 entries
+                  </option>
+                  <option value="2">
+                    Webster's Compound forms – 76, 205 entries
+                  </option>
+                </optgroup>
+                <optgroup label="Scrabble(tm) Dictionaries">
+                  <option value="3" selected="selected">
+                    Scrabble player's dictionary - 79,338 entries (8-letter max)
+                  </option>
+                  <option value="4">
+                    Scrabble player's dictionary - 172,823 entries (full)
+                  </option>
+                </optgroup>
+                <optgroup label="Unix/Linux Dictionaries">
+                  <option value="5">
+                    Unix dictionary – 25,104 entries
+                  </option>
+                </optgroup>
+                <optgroup label="Carnegie Mellon list">
+                  <option value="6">
+                    Carnegie Mellon University list – 111,308 entries
+                  </option>
+                </optgroup>
+              </select>  
+        </div>-->

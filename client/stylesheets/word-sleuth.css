@@ -1,0 +1,118 @@
+
+@font-face {
+    font-family: 'Acme';
+	src: url('fonts/Acme.ttf'); 
+	src: url('fonts/Acme.ttf?#iefix') format('truetype'), 
+	     url('fonts/Acme.ttf') format('truetype'), 
+}
+
+@font-face {
+    font-family: 'AcmeBold';
+	src: url('fonts/AcmeBold.ttf'); 
+	src: url('fonts/AcmeBold.ttf?#iefix') format('truetype'), 
+	     url('fonts/AcmeBold.ttf') format('truetype'), 
+}
+
+body {
+    /*color: #EEEEEE;
+	background-color: #232323;*/
+}
+
+h1 {
+	/*color: #EEEEEE;*/
+	font-family: 'Acme';
+}
+
+h2 {
+	/*color:#67C8FF; */
+	font-family: 'Oswald';
+}
+
+h3 {
+	/*color:#EEEEEE;*/
+	font-family: 'Acme';
+}
+
+
+
+h4 {
+	text-decoration: none;
+}
+
+p {
+	/*color: #FFFFFF;*/
+	/*font-family: 'Oswald';*/
+	font-size: 1.0em;
+}
+
+a {
+	text-decoration: underline;
+}
+
+body {
+	margin:5px;
+}
+
+.brand {
+	border-color: black;
+}
+
+.info_container {
+
+	border: none;
+}
+
+#headerArea {
+	margin-top:20px;
+}
+
+#purposeArea {
+	margin-top:20px;
+}
+
+#searchArea {
+	margin-top:20px;
+}
+
+.row {
+	margin-top:20px;
+}
+
+#wordArea {
+	margin-top:20px;
+}
+
+#anagramsArea {
+	margin-top:20px;
+}
+
+#subwordsArea {
+	margin-top:20px;
+}
+
+#dictionaryArea, #dictArea {
+	margin-top: 20px;
+}
+
+#selectDictionaryArea {
+	/*color:#111111;*/
+	margin-top: 20px;
+	font-size: 1.35em;
+	
+}
+
+
+
+@font-face {
+    font-family: 'Acme';
+	src: url('fonts/Acme.ttf'); 
+	src: url('fonts/Acme.ttf?#iefix') format('truetype'), 
+	     url('fonts/Acme.ttf') format('truetype'), 
+}
+
+@font-face {
+    font-family: 'AcmeBold';
+	src: url('fonts/AcmeBold.ttf'); 
+	src: url('fonts/AcmeBold.ttf?#iefix') format('truetype'), 
+	     url('fonts/AcmeBold.ttf') format('truetype'), 
+}

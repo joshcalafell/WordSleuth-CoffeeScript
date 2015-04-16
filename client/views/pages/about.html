@@ -1,0 +1,21 @@
+<template name="about">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Special+Elite|Oswald' rel='stylesheet' type='text/css'>
+		<title>WordSleuth</title>
+	</head>
+	<body>
+	  {{> header}}
+	  <h3>About Word Sleuth:</h3>
+      <p>
+        Word Sleuth is an anagram finder that also finds subwords (words that can be made from letters provided).
+        You can choose from a list of different dictionaries that are all freely available on the internet. This
+        app was written using CoffeeScript, JavaScript, HTML, CSS, MongoDB, and MeteorJS. Soon this app will be 
+        available on both Android and iOS, as well as the web. Stay tuned... More to come soon...
+      </p>
+	  {{> personalInfo}}
+	    <div id="footer">
+            {{> footer}}
+        </div>
+	</body>
+</template>
