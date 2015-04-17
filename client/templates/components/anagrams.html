@@ -1,12 +1,18 @@
 <template name="anagrams">
-    <h3>Anagrams for "<strong>{{userInput}}</strong>"</h3> 
-    {{#if all_anagram_items}}
-        <h4>
-	        {{#each all_anagram_items}}
-	            {{this.anagram}}
-	        {{/each}}
-        </h4>
-    {{else}}
-    	<h4>None found...</h4>
-    {{/if}}
+    <div class="container">
+        <h3>Anagrams for "{{userInput}}" <span class="badge">{{anagramCount}}</span></h3> 
+        {{#if all_anagram_items}}
+            <span style="color:white">
+            
+    	        {{#each all_anagram_items}}
+    	            <p>
+                        <span style="color:red">&#x2717;</span>
+                        {{this.anagram}}
+                    </p>
+    	        {{/each}}
+            </span>
+        {{else}}
+        	<p>None found...</p>
+        {{/if}}
+    </div>
 </template>

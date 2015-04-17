@@ -21,8 +21,8 @@
 }
 
 body {
-    /*color: #EEEEEE;
-	background-color: #232323;*/
+    color: #EEEEEE;
+	background-color: #333333;
 }
 
 h1 {
@@ -49,77 +49,15 @@ h4 {
 p {
 	/*color: #FFFFFF;*/
 	/*font-family: 'Oswald';*/
-	font-size: 1.2em;
+	font-size: 1.25em;
 }
 
 a {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
 body {
 	margin:5px;
 }
 
-.brand {
-	border-color: black;
-}
 
-.info_container {
-
-	border: none;
-}
-
-#headerArea {
-	margin-top:20px;
-}
-
-#purposeArea {
-	margin-top:20px;
-}
-
-#searchArea {
-	margin-top:20px;
-}
-
-.row {
-	margin-top:20px;
-}
-
-#wordArea {
-	margin-top:20px;
-}
-
-#anagramsArea {
-	margin-top:20px;
-}
-
-#subwordsArea {
-	margin-top:20px;
-}
-
-#dictionaryArea, #dictArea {
-	margin-top: 20px;
-}
-
-#selectDictionaryArea {
-	/*color:#111111;*/
-	margin-top: 20px;
-	font-size: 1.35em;
-	
-}
-
-
-
-@font-face {
-    font-family: 'Acme';
-	src: url('fonts/Acme.ttf'); 
-	src: url('fonts/Acme.ttf?#iefix') format('truetype'), 
-	     url('fonts/Acme.ttf') format('truetype'), 
-}
-
-@font-face {
-    font-family: 'AcmeBold';
-	src: url('fonts/AcmeBold.ttf'); 
-	src: url('fonts/AcmeBold.ttf?#iefix') format('truetype'), 
-	     url('fonts/AcmeBold.ttf') format('truetype'), 
-}

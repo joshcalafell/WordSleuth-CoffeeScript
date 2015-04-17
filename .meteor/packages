@@ -10,3 +10,5 @@ moment
 bootstrap-3
 npm
 coffeescript
+bootstrap3:glyphicons
+less

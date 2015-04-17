@@ -43,6 +43,9 @@ if Meteor.isClient
     all_subword_items_length_8_up: ->
       Subwords.find( length: $gte: 8 ).fetch()
 
+    subwordCount: ->
+      Subwords.find().count()
+
   ###
   * Helpers for anagrams
   ###
@@ -54,6 +57,9 @@ if Meteor.isClient
     
     all_anagram_items: ->
       Anagrams.find().fetch()
+
+    anagramCount: ->
+      Anagrams.find().count()
 
   ###
   * Helpers for header

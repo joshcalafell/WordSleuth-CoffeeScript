@@ -5,10 +5,7 @@
 * Purpose: CSS declarations for footer template go here
 */
 
-/*
-.date {
-	
-}
+
 
 .copyright {
 	
@@ -33,9 +30,9 @@
 
 .copyright p{
 	text-align: center;
-	color: #E60000;
+	color: #ff1122;
 	margin-top: 10px;
-	font-family: 'Acme', serif;
+	font-family: 'Oswald', serif;
 	font-size: 1.333em;
 }
 
@@ -43,8 +40,6 @@
 	text-align: center;
 	color: #E60000;
 	margin-top: 10px;
-	font-family: 'Oswald', serif;
+	font-family: 'Roboto', serif;
 	font-size: 1.133em;
 }
-
-*/
