@@ -28,6 +28,7 @@ body {
 h1 {
 	/*color: #EEEEEE;*/
 	font-family: 'oliver';
+	font-size: 3.5em;
 }
 
 h2 {
@@ -58,6 +59,10 @@ a {
 
 body {
 	margin:5px;
+}
+
+.badge {
+	font-size: .666em;
 }
 
 
