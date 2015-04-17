@@ -13,6 +13,13 @@
 	     url('fonts/AcmeBold.ttf') format('truetype'), 
 }
 
+@font-face {
+    font-family: 'oliver';
+	src: url('fonts/oliver.ttf'); 
+	src: url('fonts/oliver.ttf?#iefix') format('truetype'), 
+	     url('fonts/oliver.ttf') format('truetype'), 
+}
+
 body {
     /*color: #EEEEEE;
 	background-color: #232323;*/
@@ -20,17 +27,17 @@ body {
 
 h1 {
 	/*color: #EEEEEE;*/
-	font-family: 'Acme';
+	font-family: 'oliver';
 }
 
 h2 {
 	/*color:#67C8FF; */
-	font-family: 'Oswald';
+	font-family: 'Roboto';
 }
 
 h3 {
 	/*color:#EEEEEE;*/
-	font-family: 'Acme';
+	font-family: 'Roboto';
 }
 
 

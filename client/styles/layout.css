@@ -13,21 +13,29 @@
 .navbar-inner a{
 	margin-left: 15px;
 	color: black;
-	font-family: 'Acme';
 	
-	font-size: 1.5em;	
+	
 }
 
 li {
 	display: inline;
+	font-family: 'Roboto';
 }
 
 #items {
-	/*font-family: 'Roboto';*/
+	font-family: none;
 }
 
 #items a, #items li{
-	/*font-family: 'Roboto';*/
+	font-family: 'Roboto';
+}
+
+#menu a {
+	font-family: 'Roboto';
+}
+
+.dropdown li {
+	font-family: 'Roboto';
 }
 
 
