@@ -35,7 +35,7 @@ h2 {
 	font-family: 'Roboto';
 }
 
-h3 {
+h3, h4, h5 {
 	/*color:#EEEEEE;*/
 	font-family: 'Roboto';
 }
@@ -49,7 +49,7 @@ h4 {
 p {
 	/*color: #FFFFFF;*/
 	/*font-family: 'Oswald';*/
-	font-size: 1.0em;
+	font-size: 1.2em;
 }
 
 a {
