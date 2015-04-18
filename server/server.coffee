@@ -89,13 +89,17 @@ if Meteor.isServer
               match = false
             j++
 
+        
         # If match then insert the item into the database
         if match
-          Subwords.insert
-            index: match_count
-            subword: dict[i]
-            length: dict[i].length
-          match_count++
+          if i > 0
+            lastWord = dict[i - 1].toLowerCase()
+            if lastWord != dict[i].toLowerCase()
+              Subwords.insert
+                index: match_count
+                subword: dict[i]
+                length: dict[i].length
+            match_count++
         
         i++
 

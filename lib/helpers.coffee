@@ -19,6 +19,14 @@ if Meteor.isClient
     userInput: ->
       Session.get 'userInput'
 
+  Template.dictArea.helpers
+    dictionaryName: ->
+      Session.get 'dictionaryName'
+    dictionaryIndex: ->
+      Session.get 'dictionaryIndex'
+    userInput: ->
+      Session.get 'userInput'
+
   ###
   * Helpers for subwords
   ###
@@ -83,4 +91,3 @@ if Meteor.isClient
       console.log 'Copyright string was querried'
       copyright
 
-# ---

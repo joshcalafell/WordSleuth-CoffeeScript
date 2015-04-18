@@ -1,117 +1,50 @@
 <template name="layout">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-inner">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='http://fonts.googleapis.com/css?family=Special+Elite|Oswald' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Slabo+27px|Roboto' rel='stylesheet' type='text/css'>
-        <title>Word Sleuth - Anagram Finder and More!</title>
-    </head>
+            <li id="menu">
+                <a href="{{pathFor 'wordsleuth'}}" class="brand"></a>
+                <img src="icons/icon.png" style="width:50px;height:50px; ">
+            </li>
+            
+            <li id="menu"><a href="{{pathFor 'about'}}">About</a></li>
+            <li id="menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dictionary <b class="caret"></b></a>
+                <ul id="items" class="dropdown-menu" role="button">
+                    <li class="dropdown-header" ><u>Scrabble<small>(TM)</small> Dictionaries</u></li>
+                    <li class="item" value="1">
+                        <a href="{{pathFor 'scrabbleCondensed'}}">Scrabble Players Dictionary (8-Letter Max)</a>
+                    </li>
+                    <li class="item" value="2">
+                        <a href="{{pathFor 'scrabbleFull'}}">Scrabble Players Dictionary (full)</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header"><u>Merriam's Webster<small>(TM)</small> Dictionaries</u></li>
+                    <li class="item" value="3">
+                        <a href="{{pathFor 'merriamSingle'}}">Webster's Single words – 234,936 entries</a>
+                    </li>
+                    <li class="item" value="4">
+                        <a href="{{pathFor 'merriamCompound'}}">Webster's Compund words – 76,205 entries</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header"><u>Unix Dictionaries</u></li>
+                    <li class="item" value="5">
+                        <a href="{{pathFor 'unixWords'}}">Unix dictionary – 25,104 entries</a>
+                    </li>
+                    <li class="dropdown-header"><u>Carnegie Melon Dictionaties</u></li>
+                    <li class="item" value="6">
+                        <a href="{{pathFor 'carnegieWords'}}">Carnegie Mellon University list – 111,308 entries</a>
+                    </li>
 
-    <body>
-        <div class="navbar navbar-default" role="navigation">
-            <div class="navbar-inner">
-
-                <li id="menu">
-                    <a href="{{pathFor 'wordsleuth'}}" class="brand"></a>
-                    <img src="icons/icon.png" style="width:50px;height:50px; ">
-                </li>
-                
-                <li id="menu"><a href="{{pathFor 'about'}}">About</a></li>
-                <li id="menu" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dictionary <b class="caret"></b></a>
-                    <ul id="items" class="dropdown-menu" role="button">
-                        <li class="dropdown-header" ><u>Scrabble<small>(TM)</small> Dictionaries</u></li>
-                        <li class="item" value="1">
-                            <a href="{{pathFor 'scrabbleCondensed'}}">Scrabble Players Dictionary (8-Letter Max)</a>
-                        </li>
-                        <li class="item" value="2">
-                            <a href="{{pathFor 'scrabbleFull'}}">Scrabble Players Dictionary (full)</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header"><u>Merriam's Webster<small>(TM)</small> Dictionaries</u></li>
-                        <li class="item" value="3">
-                            <a href="{{pathFor 'merriamSingle'}}">Webster's Single words – 234,936 entries</a>
-                        </li>
-                        <li class="item" value="4">
-                            <a href="{{pathFor 'merriamCompound'}}">Webster's Compund words – 76,205 entries</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header"><u>Unix Dictionaries</u></li>
-                        <li class="item" value="5">
-                            <a href="{{pathFor 'unixWords'}}">Unix dictionary – 25,104 entries</a>
-                        </li>
-                        <li class="dropdown-header"><u>Carnegie Melon Dictionaties</u></li>
-                        <li class="item" value="6">
-                            <a href="{{pathFor 'carnegieWords'}}">Carnegie Mellon University list – 111,308 entries</a>
-                        </li>
-
-                    </ul>
-                </li>
-            </div>
+                </ul>
+            </li>
         </div>
-        <!-- Static navbar -->
+    </div>
+    <!-- Static navbar -->
 
-        <div class="container">
-            {{> yield}}
-        </div>
-    </body>
+    <div class="container">
+        {{> yield}}
+    </div>
+  
 </template>
 
-<template name="layout2">
-
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">WordSleuth</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dictionaries <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li class="dropdown-header"><u>Scrabble<small>(TM)</small> Dictionaries</u></li>
-            <li class="item" value="1">
-                <a href="{{pathFor 'scrabbleCondensed'}}">Scrabble Players Dictionary (8-Letter Max)</a>
-            </li>
-            <li class="item" value="2">
-                <a href="{{pathFor 'scrabbleFull'}}">Scrabble Players Dictionary (full)</a>
-            </li>
-            <li class="divider"></li>
-            <li class="dropdown-header"><u>Merriam's Webster<small>(TM)</small> Dictionaries</u></li>
-            <li class="item" value="3">
-                <a href="{{pathFor 'merriamSingle'}}">Webster's Single words – 234,936 entries</a>
-            </li>
-            <li class="item" value="4">
-                <a href="{{pathFor 'merriamCompound'}}">Webster's Compund words – 76,205 entries</a>
-            </li>
-            <li class="divider"></li>
-            <li class="dropdown-header"><u>Unix Dictionaries</u></li>
-            <li class="item" value="5">
-                <a href="{{pathFor 'unixWords'}}">Unix dictionary – 25,104 entries</a>
-            </li>
-            <li class="dropdown-header"><u>Carnegie Melon Dictionaties</u></li>
-            <li class="item" value="6">
-                <a href="{{pathFor 'carnegieWords'}}">Carnegie Mellon University list – 111,308 entries</a>
-            </li>
-
-          </ul>
-       </li>
-       </ul>
-       </div>
-       </div>
-       </nav>
-       </template>
-
-   

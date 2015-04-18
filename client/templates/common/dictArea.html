@@ -1,0 +1,25 @@
+<template name="dictArea">
+    <div class="container">
+            <div class="well">
+                <p>
+                    An app to find anagrams, or other words, that can be made 
+                    from the letters you provide...  
+                </p>
+                <p id="dictInfo">
+                    <u>Current Dictionary:</u> {{dictionaryName}}</p>
+                <div id="searchArea" class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input id="input" type="text" 
+                            class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button  class="btn btn-default" 
+                                    type="button">Go!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 --> 
+                </div>
+            </div>
+        </div>
+
+</template>
