@@ -20,7 +20,7 @@ if Meteor.isClient
 
   ###********* Events *********###
 
-  Template.wordsleuth.events 'click button': ->
+  Template.dictArea.events 'click button': ->
     input = document.getElementById('input')
     word = input.value.replace(/[^A-Za-z]/g, '').toLowerCase()
 
@@ -36,6 +36,8 @@ if Meteor.isClient
     Meteor.call 'findAnagrams', word, Session.get('dictionaryIndex')
     Meteor.call 'findSubwords', word, Session.get('dictionaryIndex')
     return
+
+
 
   ###********* Functions *********###
 

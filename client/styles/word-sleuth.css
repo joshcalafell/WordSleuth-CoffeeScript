@@ -21,6 +21,7 @@
 }
 
 body {
+	margin: 5px;
     color: #EEEEEE;
 	background-color: #333333;
 	background-image: url('backgrounds/sleuth.png');
@@ -37,12 +38,12 @@ h1 {
 
 h2 {
 	/*color:#67C8FF; */
-	font-family: 'Roboto';
+	/*font-family: 'Roboto';*/
 }
 
 h3, h4, h5 {
 	/*color:#EEEEEE;*/
-	font-family: 'Roboto';
+	/*font-family: 'Roboto';*/
 }
 
 
@@ -54,20 +55,16 @@ h4 {
 p {
 	/*color: #FFFFFF;*/
 	/*font-family: 'Oswald';*/
-	font-size: 1.35em;
+	font-size: 1.25em;
 }
 
 a {
 	/*text-decoration: underline;*/
 }
 
-body {
-
-}
 
 .badge {
-	font-size: .666em;
-
+	font-size: .866em;
 }
 
 .well {

@@ -1,4 +1,7 @@
-
+li {
+	display: inline;
+	/*font-family: 'Roboto';*/
+}
 
 .navbar {
 	background-color: #E1E1E1;
@@ -14,30 +17,8 @@
 .navbar-inner a{
 	margin-left: 15px;
 	color: black;
-	
-	
 }
 
-li {
-	display: inline;
-	font-family: 'Roboto';
-}
-
-#items {
-	font-family: none;
-}
-
-#items a, #items li{
-	font-family: 'Roboto';
-}
-
-#menu a {
-	font-family: 'Roboto';
-}
-
-.dropdown li {
-	font-family: 'Roboto';
-}
 
 
 

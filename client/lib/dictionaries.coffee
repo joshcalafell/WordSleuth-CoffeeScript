@@ -28,7 +28,7 @@ if Meteor.isClient
   * Dictionary template helpers
   ###
 
-  Template.scrabbleCondensed.events 'click #button-scrabble-condensed': ->
+  Template.layout.events 'click #scrabbleCondensed': ->
     Session.set 'dictionaryIndex', 0
     Session.set 'dictionaryName', dictionaryNames[0]
     Meteor.call 'resetPage'
@@ -36,7 +36,7 @@ if Meteor.isClient
     setTimeout 'Router.go(\'/\')', 1000
     return
 
-  Template.scrabbleFull.events 'click #button-scrabble-full': ->
+  Template.layout.events 'click #scrabbleFull': ->
     Session.set 'dictionaryIndex', 1
     Session.set 'dictionaryName', dictionaryNames[1]
     Meteor.call 'resetPage'
@@ -44,7 +44,7 @@ if Meteor.isClient
     setTimeout 'Router.go(\'/\')', 1000
     return
 
-  Template.merriamSingle.events 'click #button-merriam-single': ->
+  Template.layout.events 'click #merriamSingle': ->
     Session.set 'dictionaryIndex', 2
     Session.set 'dictionaryName', dictionaryNames[2]
     Meteor.call 'resetPage'
@@ -52,25 +52,9 @@ if Meteor.isClient
     setTimeout 'Router.go(\'/\')', 1000
     return
 
-  Template.merriamCompound.events 'click #button-merriam-compound': ->
+  Template.layout.events 'click #merriamCompound': ->
     Session.set 'dictionaryIndex', 3
     Session.set 'dictionaryName', dictionaryNames[3]
-    Meteor.call 'resetPage'
-    # Set a timeout to make it transition better
-    setTimeout 'Router.go(\'/\')', 1000
-    return
-
-  Template.unixWords.events 'click #button-unix-words': ->
-    Session.set 'dictionaryIndex', 4
-    Session.set 'dictionaryName', dictionaryNames[4]
-    Meteor.call 'resetPage'
-    # Set a timeout to make it transition better
-    setTimeout 'Router.go(\'/\')', 1000
-    return
-
-  Template.carnegieWords.events 'click #button-carnegie-words': ->
-    Session.set 'dictionaryIndex', 5
-    Session.set 'dictionaryName', dictionaryNames[5]
     Meteor.call 'resetPage'
     # Set a timeout to make it transition better
     setTimeout 'Router.go(\'/\')', 1000

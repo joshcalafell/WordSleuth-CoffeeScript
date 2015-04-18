@@ -26,6 +26,7 @@ if Meteor.isClient
       Session.get 'dictionaryIndex'
     userInput: ->
       Session.get 'userInput'
+    
 
   ###
   * Helpers for subwords

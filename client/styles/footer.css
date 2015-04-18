@@ -5,14 +5,6 @@
 * Purpose: CSS declarations for footer template go here
 */
 
-
-
-.copyright {
-	
-}
-
-
-
 .footer_container {
 	height: 4em;
 	vertical-align: bottom;
@@ -21,25 +13,13 @@
 
 }
 
-.date p{
-	text-align: center;
-	color:#EEEEEE;
-	font-size: 1.666em;
-	font-family: 'Oswald', serif;
-}
-
-.copyright p{
+.copyright {
 	text-align: center;
 	color: #ff1122;
-	margin-top: 10px;
-	font-family: 'Oswald', serif;
-	font-size: 1.333em;
+	/*font-size: 1.333em;*/
 }
 
 #bottom_links {
 	text-align: center;
 	color: #E60000;
-	margin-top: 10px;
-	font-family: 'Roboto', serif;
-	font-size: 1.133em;
 }
