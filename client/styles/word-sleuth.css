@@ -23,12 +23,16 @@
 body {
     color: #EEEEEE;
 	background-color: #333333;
+	background-image: url('icons/sleuth.png');
+	
 }
 
 h1 {
 	/*color: #EEEEEE;*/
 	font-family: 'oliver';
 	font-size: 3.5em;
+	color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 h2 {
@@ -50,7 +54,7 @@ h4 {
 p {
 	/*color: #FFFFFF;*/
 	/*font-family: 'Oswald';*/
-	font-size: 1.25em;
+	font-size: 1.35em;
 }
 
 a {
@@ -58,11 +62,18 @@ a {
 }
 
 body {
-	margin:5px;
+
 }
 
 .badge {
 	font-size: .666em;
+
+}
+
+.well {
+		background-color:#424242;
+		border-width: 0px;
+		opacity: 0.95;
 }
 
 

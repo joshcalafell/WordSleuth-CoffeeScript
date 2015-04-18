@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <div class="navbar navbar-default">
+        <div class="navbar navbar-default" role="navigation">
             <div class="navbar-inner">
 
                 <li id="menu">
@@ -19,8 +19,8 @@
                 <li id="menu"><a href="{{pathFor 'about'}}">About</a></li>
                 <li id="menu" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dictionary <b class="caret"></b></a>
-                    <ul id="items" class="dropdown-menu">
-                        <li class="dropdown-header"><u>Scrabble<small>(TM)</small> Dictionaries</u></li>
+                    <ul id="items" class="dropdown-menu" role="button">
+                        <li class="dropdown-header" ><u>Scrabble<small>(TM)</small> Dictionaries</u></li>
                         <li class="item" value="1">
                             <a href="{{pathFor 'scrabbleCondensed'}}">Scrabble Players Dictionary (8-Letter Max)</a>
                         </li>
