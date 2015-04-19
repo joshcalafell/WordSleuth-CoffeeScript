@@ -1,10 +1,14 @@
 <template name="anagrams">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Lato|Arimo|Roboto|Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
     <div class="container">
         <div class="well">
-            <h3>
+            <h4>
                 Anagrams for "{{userInput}}" 
                 <span class="badge" style="color:#7FDBFF;" id="anagramcounts">{{anagramCount}}</span>
-            </h3> 
+            </h4> 
             {{#if all_anagram_items}}
                 <span style="color:white">
                 
@@ -20,4 +24,5 @@
             {{/if}}
         </div>
     </div>
+  </body>
 </template>

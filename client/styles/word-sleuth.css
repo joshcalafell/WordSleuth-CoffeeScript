@@ -30,10 +30,12 @@ body {
 
 h1 {
 	/*color: #EEEEEE;*/
+	margin-top:-20px;
 	font-family: 'oliver';
-	font-size: 3.5em;
+	font-size: 2.5em;
 	color: white;
     text-shadow: 2px 2px 4px #000000;
+
 }
 
 h2 {
@@ -44,18 +46,13 @@ h2 {
 h3, h4, h5 {
 	/*color:#EEEEEE;*/
 	/*font-family: 'Roboto';*/
-}
-
-
-
-h4 {
-	text-decoration: none;
+	font-family: 'Open Sans';
 }
 
 p {
 	/*color: #FFFFFF;*/
 	/*font-family: 'Oswald';*/
-	font-size: 1.25em;
+	font-size: 1.2em;
 }
 
 a {
@@ -68,9 +65,18 @@ a {
 }
 
 .well {
-		background-color:#424242;
-		border-width: 0px;
-		opacity: 0.95;
+	background-color:#323232;
+	border-width: 0px;
+	opacity: 0.95;
 }
+
+#dictArea {
+	color: yellow;
+}
+
+.fb-like {
+	color:white;
+}
+
 
 

@@ -1,29 +1,31 @@
 <template name="wordsleuth">
-    <body>
-        <div id="headerArea">
-            {{> header}}
-        </div>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Lato|Arimo|Roboto|Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="headerArea">
+      {{> header}}
+    </div>
 
-        <div id="dictionaryArea">
-            {{> dictArea}}
-        </div>
-      
-        <div id="anagramsArea">
-            {{#if userInput}}
-                {{> anagrams}}
-            {{/if}}
-        </div>
+    <div id="dictionaryArea">
+      {{> dictArea}}
+    </div>
+  
+    <div id="anagramsArea">
+      {{#if userInput}}
+        {{> anagrams}}
+      {{/if}}
+    </div>
 
-        <div id="subwordsArea">
-            {{#if userInput}}
-                {{> subwords}}
-            {{/if}}
-        </div>
+    <div id="subwordsArea">
+      {{#if userInput}}
+        {{> subwords}}
+      {{/if}}
+    </div>
 
-        <div id="footer">
-            {{> footer}}
-        </div>
-    </body>
-
+    <div id="footer">
+        {{> footer}}
+    </div>
+  </body>
 </template>
 
