@@ -11,6 +11,7 @@ Router.configure layoutTemplate: 'layout'
 Router.map ->
   @route 'wordsleuth', path: '/'
   @route 'about', path: 'about'
+  @route 'contact', path: 'contact'
   @route 'merriamSingle', path: 'dictionaries/merriamSingle'
   @route 'merriamCompound', path: 'dictionaries/merriamCompound'
   @route 'scrabbleCondensed', path: 'dictionaries/scrabbleCondensed'

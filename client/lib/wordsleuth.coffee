@@ -47,4 +47,9 @@ if Meteor.isClient
     console.log Session.get('dateval')
     return
 
+  resetPage = ->
+    Meteor.call 'resetPage'
+    console.log "resetPage called"
+    return
+
 # EOF

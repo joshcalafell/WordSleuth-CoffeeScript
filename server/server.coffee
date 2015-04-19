@@ -106,6 +106,7 @@ if Meteor.isServer
       return
 
     resetPage: ->
+      console.log "resetPage called - received on server side..."
       Anagrams.remove {}
       Subwords.remove {}
       return
