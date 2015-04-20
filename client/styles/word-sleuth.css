@@ -80,5 +80,21 @@ a {
 
 }
 
+#btn-word {
+    font-size: 1em;
+ 	margin:5px;
+	margin-top: 8p;
+	background-color: #DEDEDE;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 0px solid #909090;
+    padding-left: 10px;
+    padding-right: 10px;
+
+	/*background-color: #AAAAAA;*/
+	/*color:white;*/
+
+}
+
 
 
