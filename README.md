@@ -32,7 +32,7 @@ Contact me: rabbitfighter@cryptolab.net
 
 Licence
 ---------
-Copyright 2015 Rabbit Fighter Studios (rabbitfighter.net)
+Copyright 2015 - RFS
 
 
 

@@ -3,11 +3,11 @@
 	<div class="well">
         <h4>
         	Subwords for "{{userInput}}" 
-        	<span class="badge" style="color:#7FDBFF;" id="subwordcounts">{{subwordCount}}</span>
+        	<span class="badge" style="color:#7FDBFF;" id="subwordcounts">{{subwordCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
         </h4>
         {{#if all_subword_items_length_1}}
 	        <h4><span style="color:red">&#x2717;</span><u>1-Letter words:</u></h4>
-	        <p>
+	        <p id="#btn-word">
 	        {{#each all_subword_items_length_1}}
 	        <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">
 			  {{this.subword}}
@@ -18,7 +18,7 @@
 	    {{/if}}
         {{#if all_subword_items_length_2}}
 	        <h4><span style="color:red">&#x2717;</span><u>2-Letter words:</u></h4>
-	        <p>
+	        <p id="#btn-word">
 	        {{#each all_subword_items_length_2}}
 	        <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">
 			  {{this.subword}}
@@ -29,7 +29,7 @@
 	    {{/if}}
         {{#if all_subword_items_length_3}}
 	        <h4><span style="color:red">&#x2717;</span><u>3-Letter words:</u></h4>
-	        <p>
+	        <p id="#btn-word">
 	        {{#each all_subword_items_length_3}}
 	        <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">
 			  {{this.subword}}
@@ -40,7 +40,7 @@
 	    {{/if}}
         {{#if all_subword_items_length_4}}
 	        <h4><span style="color:red">&#x2717;</span><u>4-Letter words:</u></h4>
-	        <p>
+	        <p id="#btn-word">
 	        {{#each all_subword_items_length_4}}
 	            <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">{{this.subword}}
 			</button>
@@ -49,7 +49,7 @@
 	    {{/if}}
         {{#if all_subword_items_length_5}}
         	<h4><span style="color:red">&#x2717;</span><u>5-Letter words:</u></h4>
-        	<p>
+        	<p id="#btn-word">
 	        {{#each all_subword_items_length_5}}
 	        <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">
 			  {{this.subword}}
@@ -60,7 +60,7 @@
 	    {{/if}}
 	    {{#if all_subword_items_length_6}}
         	<h4><span style="color:red">&#x2717;</span><u>6-Letter words:</u></h4>
-        	<p>
+        	<p id="#btn-word">
 	        {{#each all_subword_items_length_6}}
 	        <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">
 			  {{this.subword}}
@@ -71,7 +71,7 @@
 	    {{/if}}
 	    {{#if all_subword_items_length_7}}
         	<h4><span style="color:red">&#x2717;</span><u>7-Letter words:</u></h4>
-        	<p>
+        	<p id="#btn-word">
 	        {{#each all_subword_items_length_7}}
 	        <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">
 			  {{this.subword}}
@@ -82,7 +82,7 @@
 	    {{/if}}
 	    {{#if all_subword_items_length_8_up}}
         	<h4><span style="color:red">&#x2717;</span><u>8-Letter words and up:</u></h4>
-        	<p>
+        	<p id="#btn-word">
 	        {{#each all_subword_items_length_8_up}}
 	        <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">
 			  {{this.subword}}

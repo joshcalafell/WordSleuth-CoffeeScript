@@ -51,7 +51,7 @@ h3, h4, h5 {
 
 p {
 	/*color: #FFFFFF;*/
-	/*font-family: 'Oswald';*/
+	
 	font-size: 1.2em;
 }
 
@@ -81,6 +81,7 @@ a {
 }
 
 #btn-word {
+	
     font-size: 1em;
  	margin:5px;
 	margin-top: 8p;
@@ -94,6 +95,10 @@ a {
 	/*background-color: #AAAAAA;*/
 	/*color:white;*/
 
+}
+
+#btn-word p {
+	font-family: 'Droid Sans Mono';
 }
 
 
