@@ -6,3 +6,5 @@
 @Anagrams = new Meteor.Collection('anagrams');
 
 @Subwords = new Meteor.Collection('subwords');
+
+@Combinations = new Meteor.Collection('combinations');

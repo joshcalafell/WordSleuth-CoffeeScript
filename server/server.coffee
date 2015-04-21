@@ -1,8 +1,11 @@
 if Meteor.isServer
   
   Meteor.startup ->
+    console.log "Meteor server started"
     Anagrams.remove {}
     Subwords.remove {}
+    Combinations.remove {}
+    console.log "Anagrams, Subwords, and Combinations db items removed"
     return
   
   # Get a handle for the dictionaries in an array form
@@ -11,8 +14,6 @@ if Meteor.isServer
     Assets.getText('dictionaries/scrabble_full.txt')
     Assets.getText('dictionaries/merriam_single_words.txt')
     Assets.getText('dictionaries/merriam_compound_words.txt')
-    Assets.getText('dictionaries/unix_words.txt')
-    Assets.getText('dictionaries/carnegie_melon_words.txt')
   ]
 
   ###
@@ -22,9 +23,13 @@ if Meteor.isServer
 
   Meteor.methods
     
+    # Find anagrams
     findAnagrams: (word, dictionaryIndex) ->
+  
+      console.log "find combinations called."
       
       Anagrams.remove {}
+
       dict = dictionaries[dictionaryIndex].toString().split('\n')
       word = word.toLowerCase()
       sortedWord = word.split('').sort().join('')
@@ -46,6 +51,8 @@ if Meteor.isServer
 
     findSubwords: (word, dictionaryIndex) ->
       
+      console.log "Find sub-words called."
+
       Subwords.remove {}
       
       match_count = 0
@@ -102,13 +109,23 @@ if Meteor.isServer
             match_count++
         
         i++
+    
+      return
 
+    findCombinations: () ->
+      console.log "Find combinations called."
+      Combinations.insert
+        word1: "Contrary"
+        word2: "Blue"
+        switched: false
       return
 
     resetPage: ->
       console.log "resetPage called - received on server side..."
       Anagrams.remove {}
       Subwords.remove {}
+      Combinations.remove {}
+      console.log "Anagrams, Subwords, and Combinations db items removed"
       return
 
 #EOF

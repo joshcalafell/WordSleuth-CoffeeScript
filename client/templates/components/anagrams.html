@@ -1,24 +1,23 @@
 <template name="anagrams">
-  <head>
-    <link href='http://fonts.googleapis.com/css?family=Lato|Arimo|Roboto|Open+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-  </head>
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Lato|Arimo|Roboto|Open+Sans|Droid+Sans+Mono|Cousine' rel='stylesheet' type='text/css'>
+    </head>
  
-    
-        <div class="well">
-            <h4>
-                Anagrams for "{{userInput}}" 
-                <span class="badge" style="color:#7FDBFF;" id="anagramcounts">{{anagramCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
-            </h4> 
-            {{#if all_anagram_items}}                
-            <p id="#btn-word">
-    	        {{#each all_anagram_items}}
-    	            <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">{{this.anagram}}</button>
-    	        {{/each}}
-            </p>
-            {{else}}
-            	<p>None found...</p>
-            {{/if}}
-        </div>
+    <div class="well">
+        <h4>
+            Anagrams for "{{userInput}}" 
+            <span class="badge" style="color:#7FDBFF;" id="anagramcounts">{{anagramCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
+        </h4> 
+        {{#if all_anagram_items}}                
+        <p id="#btn-word">
+            {{#each all_anagram_items}}
+                <span class="badge">{{this.anagram}}</span>
+            {{/each}}
+        </p>
+        {{else}}
+        	<p>None found...</p>
+        {{/if}}
+    </div>
 
 
 </template>

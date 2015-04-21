@@ -1,33 +1,27 @@
 <template name="wordsleuth">
-  <head>
-    <link href='http://fonts.googleapis.com/css?family=Lato|Arimo|Roboto|Open+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=591499857628792";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
+
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Lato|Arimo|Roboto|Open+Sans|Droid+Sans+Mono|Cousine' rel='stylesheet' type='text/css'>
+    </head>
 
     <div id="headerArea">
-      {{> header}}
+        {{> header}}
     </div>
 
     <div id="dictionaryArea">
-      {{> dictArea}}
+        {{> dictArea}}
     </div>
-  
+
     <div id="anagramsArea">
-      {{#if userInput}}
-        {{> anagrams}}
-      {{/if}}
+        {{#if userInput}} {{> anagrams}} {{/if}}
     </div>
 
     <div id="subwordsArea">
-      {{#if userInput}}
-        {{> subwords}}
-      {{/if}}
+        {{#if userInput}} {{> subwords}} {{/if}}
+    </div>
+
+     <div id="footer">
+        {{> combinations}}
     </div>
 
     <div id="footer">
@@ -35,4 +29,3 @@
     </div>
 
 </template>
-

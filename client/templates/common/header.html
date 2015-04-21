@@ -1,22 +1,7 @@
 <template name="header">
-  <head>
-  	<link href='http://fonts.googleapis.com/css?family=Lato|Arimo|Roboto|Open+Sans' rel='stylesheet' type='text/css'>
-  	
-  </head>
-  
-	<div class="well">
-			
+  	<div class="well">	
 		<h1>Word Sleuth</h1>
 		<h4>Today is {{time}}</h4>
-		
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=591499857628792";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-		<div class="fb-like" data-href="http://wordsleuth.meteor.com" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark"></div>
+		{{>shareit}}
 	</div>
-
 </template>
