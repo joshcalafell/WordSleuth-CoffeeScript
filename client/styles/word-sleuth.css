@@ -72,7 +72,7 @@ a {
 }
 
 #dictArea {
-	color: yellow;
+	color: #FFFF33;
 }
 
 .fb-like {
@@ -84,7 +84,6 @@ a {
 	
     font-size: 1em;
  	margin:5px;
-	margin-top: 8p;
 	background-color: #DEDEDE;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -98,7 +97,20 @@ a {
 }
 
 button {
-	font-family: 'Cousine';
+	
+}
+
+.badge {
+	margin-top: 8px;
+}
+
+
+#swap-btn {
+	margin:10px;
+	display: inline;
+}
+#ok {
+	color: #66FF66;
 }
 
 

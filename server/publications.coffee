@@ -13,5 +13,5 @@ Meteor.publish 'anagrams', ->
   Anagrams.find()
 Meteor.publish 'subwords', ->
   Subwords.find()
-Meteor.publish 'combinations', ->
-  Combinations.find()
+Meteor.publish 'combos', ->
+  Combos.find()

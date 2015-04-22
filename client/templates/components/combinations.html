@@ -1,13 +1,32 @@
 <!-- glyphicon glyphicon-refresh -->
 <template name="combinations">
-  <div class="well">
-  	<h4>
-    Combinations for "{{userInput}}" 
-    <span class="badge" style="color:#7FDBFF;" id="anagramcounts">{{combinationsCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
-    </h4> 
-  	<p>
-    <button type="button" id="random-test-btn" class="btn btn-success" aria-label="Left Align">Contrary + Blue <span class="glyphicon glyphicon-refresh"></span></button>
-    </p>
+  
+  {{#if userInput}}
+    <div class="well">
+	    <h4>
+            Combinations for "{{userInput}}" 
+            <span class="badge" style="color:#7FDBFF;" id="anagramcounts">{{combosCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
+        </h4> 
+	  
+	  {{#if all_combo_items}}
+	  	<span id="ok" class="glyphicon glyphicon-ok"></span>  Combinations: 
+	  	<br>
+	  	{{#each all_combo_items}}
+	  	  <!-- Researching this now...-->
+				<button type="button" id="swap-btn" class="btn btn-info" aria-label="Left Align">{{this.word_1}} & {{this.word_2}} <span class="glyphicon glyphicon-refresh"> </span></button>	
+	  	{{/each}}
+
+	  {{else}}
+	  	<p>None found</p>
+	  {{/if}}
+	 
+	</div>
+  {{/if}}
+
+ </template>
+
+
+
 
 <!--
     {{#if all_combination_items}} 
@@ -32,8 +51,6 @@
 
     -->
 
-  </div>
- </template>
 
   	
 

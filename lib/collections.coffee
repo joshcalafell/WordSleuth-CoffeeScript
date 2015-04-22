@@ -7,4 +7,4 @@
 
 @Subwords = new Meteor.Collection('subwords');
 
-@Combinations = new Meteor.Collection('combinations');
+@Combos = new Meteor.Collection('combos');

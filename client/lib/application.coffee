@@ -13,4 +13,5 @@ Meteor.subscribe 'dictionary'
 Meteor.subscribe 'anagrams'
 Meteor.subscribe 'subwords'
 Meteor.subscribe 'input'
+Meteor.subscribe 'combos'
 

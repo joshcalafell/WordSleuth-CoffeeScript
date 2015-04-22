@@ -21,7 +21,6 @@ if Meteor.isClient
 
   Session.setDefault 'dictionaryIndex', 0
   Session.setDefault 'dictionaryName', "Scrabble(TM) Condensed (8-letter max)"
-  Session.setDefault 'combo_not_swapped', true;
 
   ###********* Events *********###
 
@@ -33,7 +32,7 @@ if Meteor.isClient
     msg = 
         "Although '" + word + "' may be a word, or make one, it's unlikely that there's an anagram, and probably a lot more words that you can make, therefore, for our server's sake, we limit searches to 16 characters. \n\n-Admin :)"
 
-    if word.length > 16
+    if word.length > 18
       alert msg
       Session.set 'userInput', ""
     else
@@ -42,8 +41,7 @@ if Meteor.isClient
     Session.set 'inputString', String('Your word is "' + word + '"')
     Meteor.call 'findAnagrams', word, Session.get('dictionaryIndex')
     Meteor.call 'findSubwords', word, Session.get('dictionaryIndex')
-    Meteor.call 'findCombinations'
-
+    Meteor.call 'findCombinations', word
     return
 
   ###********* Functions *********###

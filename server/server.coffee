@@ -4,7 +4,7 @@ if Meteor.isServer
     console.log "Meteor server started"
     Anagrams.remove {}
     Subwords.remove {}
-    Combinations.remove {}
+    Combos.remove {}
     console.log "Anagrams, Subwords, and Combinations db items removed"
     return
   
@@ -29,6 +29,7 @@ if Meteor.isServer
       console.log "find combinations called."
       
       Anagrams.remove {}
+      Combos.remove {}
 
       dict = dictionaries[dictionaryIndex].toString().split('\n')
       word = word.toLowerCase()
@@ -55,6 +56,9 @@ if Meteor.isServer
 
       Subwords.remove {}
       
+      # For the potential combinations, for later...
+      potential_combos = []
+
       match_count = 0
       dict = dictionaries[dictionaryIndex].toString().split('\n')
 
@@ -106,25 +110,86 @@ if Meteor.isServer
                 index: match_count
                 subword: dict[i]
                 length: dict[i].length
+              
+              # Add to potential combos
+              potential_combos.push dict[i]
+              console.log "\"" + dict[i] + "\" added to potential combos."
             match_count++
         
         i++
-    
+
+      first_word = ""
+      second_word = ""
+      whole_word = ""
+      i = 0
+      while i < potential_combos.length
+        first_word = potential_combos[i]
+          .toString()
+          .replace(/[^A-Za-z]/g, '')
+          .toLowerCase().split('')
+          .sort()
+          .join('')
+        
+        #console.log "First word: " + first_word
+
+        #At this point, we have a sorted array of letters for the dict word.
+        j = 0
+        while j < potential_combos.length
+          second_word = potential_combos[j]
+            .toString()
+            .replace(/[^A-Za-z]/g, '')
+            .toLowerCase()
+            .split('')
+            .sort()
+            .join('')
+
+          #console.log "Second word: " + second_word
+
+          whole_word = "" +first_word + second_word + ""
+            .replace(/[^A-Za-z]/g, '')
+            .split('')
+            .sort()
+            .join('')
+
+          #console.log "Whole word is \"" + whole_word + "\""
+
+          # Two arrays
+          word_array = whole_word.split('').sort().join('')
+          #console.log "\"word_array\": " + word_array
+
+          user_word = word.toLowerCase().split('').sort().join('')
+          #console.log "\"user_word\": " + user_word
+
+
+          if word_array == user_word
+            console.log "match found, now what???"
+            console.log "\" potential_combos[i] " + potential_combos[i]
+            console.log "\" potential_combos[j] " + potential_combos[j]
+            Combos.insert
+              word_1: potential_combos[i]
+              word_2: potential_combos[j]
+              swapped: false
+          else
+            #console.log "match not found, now what???"
+
+
+          #console.log "Got to here... j++ ->"
+          j++
+        
+        #console.log "Got to here... i++ ->"
+        i++
       return
 
-    findCombinations: () ->
-      console.log "Find combinations called."
-      Combinations.insert
-        word1: "Contrary"
-        word2: "Blue"
-        switched: false
+    findCombinations: (word) ->
+
       return
+     
 
     resetPage: ->
       console.log "resetPage called - received on server side..."
       Anagrams.remove {}
       Subwords.remove {}
-      Combinations.remove {}
+      Combos.remove {}
       console.log "Anagrams, Subwords, and Combinations db items removed"
       return
 

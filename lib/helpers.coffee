@@ -93,16 +93,15 @@ if Meteor.isClient
       console.log "User input querried."
       Session.get 'userInput'
 
-    all_combination_items: ->
+
+    all_combo_items: ->
       console.log "Combination database querried."
-      Combinations.find().fetch()
+      Combos.find().fetch()
 
-    combinationsCount: ->
+    combosCount: ->
       console.log "Combinations count querried."
-      Combinations.find().count()
+      Combos.find().count()
 
-    combination_not_swapped: ->
-      Session.get 'combo_not_swapped'
 
 
   ###

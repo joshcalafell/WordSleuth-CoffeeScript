@@ -4,8 +4,10 @@
         <h4>
         	Subwords for "{{userInput}}" 
         	<span class="badge" style="color:#7FDBFF;" id="subwordcounts">{{subwordCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
-        </h4> {{#if all_subword_items_length_1}}
-        <h4><span style="color:red">&#x2717;</span><u>1-Letter words:</u></h4>
+        </h4> 
+        {{#if all_subword_items_length_1}}
+        <h4>
+        <span id="ok" class="glyphicon glyphicon-ok"></span><u>1-Letter words:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_1}}
             <span class="badge">{{this.subword}}</span>
@@ -14,7 +16,8 @@
             {{/each}}
         </p>
         {{/if}} {{#if all_subword_items_length_2}}
-        <h4><span style="color:red">&#x2717;</span><u>2-Letter words:</u></h4>
+        <h4>
+        <span id="ok" class="glyphicon glyphicon-ok"></span> <u>2-Letter words:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_2}}
             <span class="badge">{{this.subword}}</span>
@@ -22,7 +25,7 @@
             {{/each}}
         </p>
         {{/if}} {{#if all_subword_items_length_3}}
-        <h4><span style="color:red">&#x2717;</span><u>3-Letter words:</u></h4>
+        <h4><span id="ok" class="glyphicon glyphicon-ok"></span> <u>3-Letter words:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_3}}
             <span class="badge">{{this.subword}}</span>
@@ -30,14 +33,14 @@
             {{/each}}
         </p>
         {{/if}} {{#if all_subword_items_length_4}}
-        <h4><span style="color:red">&#x2717;</span><u>4-Letter words:</u></h4>
+        <h4><span id="ok" class="glyphicon glyphicon-ok"></span> <u>4-Letter words:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_4}}
             <span class="badge">{{this.subword}}</span>
             {{/each}}
         </p>
         {{/if}} {{#if all_subword_items_length_5}}
-        <h4><span style="color:red">&#x2717;</span><u>5-Letter words:</u></h4>
+        <h4><span id="ok" class="glyphicon glyphicon-ok"></span> <u>5-Letter words:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_5}}
             <span class="badge">{{this.subword}}</span>
@@ -45,7 +48,7 @@
             {{/each}}
         </p>
         {{/if}} {{#if all_subword_items_length_6}}
-        <h4><span style="color:red">&#x2717;</span><u>6-Letter words:</u></h4>
+        <h4><span id="ok" class="glyphicon glyphicon-ok"></span> <u>6-Letter words:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_6}}
             <span class="badge">{{this.subword}}</span>
@@ -53,7 +56,7 @@
             {{/each}}
         </p>
         {{/if}} {{#if all_subword_items_length_7}}
-        <h4><span style="color:red">&#x2717;</span><u>7-Letter words:</u></h4>
+        <h4><span id="ok" class="glyphicon glyphicon-ok"></span> <u>7-Letter words:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_7}}
             <span class="badge">{{this.subword}}</span>
@@ -61,7 +64,7 @@
             {{/each}}
         </p>
         {{/if}} {{#if all_subword_items_length_8_up}}
-        <h4><span style="color:red">&#x2717;</span><u>8-Letter words and up:</u></h4>
+        <h4><span id="ok" class="glyphicon glyphicon-ok"></span> <u>8-Letter words and up:</u></h4>
         <p id="#btn-word">
             {{#each all_subword_items_length_8_up}}
             <span class="badge">{{this.subword}}</span>
