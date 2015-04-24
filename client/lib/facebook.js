@@ -1,7 +1,22 @@
-Meteor.setInterval((function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=591499857628792";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk')), 2000);
+Template.header.rendered = function() {
+    try {
+        FB.XFBML.parse();
+    }catch(e) {}   
+};
+
+ShareIt.configure({
+  useFB: true,          // boolean (default: true)
+                      // Whether to show the Facebook button
+  useTwitter: true,     // boolean (default: true)
+                      // Whether to show the Twitter button
+  useGoogle: false,      // boolean (default: true)
+                      // Whether to show the Google+ button
+  classes: "large btn", // string (default: 'large btn')
+                      // The classes that will be placed on the sharing buttons, bootstrap by default.
+  iconOnly: false,      // boolean (default: false)
+                      // Don't put text on the sharing buttons
+  applyColors: true     // boolean (default: true)
+                      // apply classes to inherit each social networks background color
+});
+
+//app id: 1057515240945312
