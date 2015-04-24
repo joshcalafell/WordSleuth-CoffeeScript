@@ -1,6 +1,15 @@
 if Meteor.isServer
+
+  TESTING = true;
+
+  Meteor.settings.contactForm = emailTo: 'rabbitfighter81@gmail.com'
   
   Meteor.startup ->
+    
+    # This is my mailgun info. 
+    # Mailgun is a free email server (10,000 limit)
+    process.env.MAIL_URL = 'smtp://postmaster%40wordsleuth.meteor.com:be3362b85c64212d4fc016cf7eab8bb3@smtp.mailgun.org:587'
+
     console.log "Meteor server started"
     Anagrams.remove {}
     Subwords.remove {}
@@ -16,20 +25,18 @@ if Meteor.isServer
     Assets.getText('dictionaries/merriam_compound_words.txt')
   ]
 
-  ###
-    Server side methods, called by the Meteor.call(), or Meteor.apply()
-    methods from the client.
-  ###
-
+  ### Meteor server-side methods ###
   Meteor.methods
     
-    # Find anagrams
+    #-- Find anagrams --#
     findAnagrams: (word, dictionaryIndex) ->
   
-      console.log "find combinations called."
+      if TESTING
+        console.log "findAnagrams() called from client."
       
       Anagrams.remove {}
-      Combos.remove {}
+      if TESTING
+        console.log "Anagrams collection removed from Mongo DB"
 
       dict = dictionaries[dictionaryIndex].toString().split('\n')
       word = word.toLowerCase()
@@ -50,12 +57,18 @@ if Meteor.isServer
         i++
       return
 
+    #-- Find Subwords --#
     findSubwords: (word, dictionaryIndex) ->
       
-      console.log "Find sub-words called."
+      if TESTING
+        console.log "findSubwords() called from client."
 
       Subwords.remove {}
-      
+      Combos.remove {}
+
+      if TESTING
+        console.log "Subwords, Combos collections removed from Mongo DB"
+
       # For the potential combinations, for later...
       potential_combos = []
 
@@ -113,7 +126,8 @@ if Meteor.isServer
               
               # Add to potential combos
               potential_combos.push dict[i]
-              console.log "\"" + dict[i] + "\" added to potential combos."
+              if TESTING
+                console.log "\"" + dict[i] + "\" added to potential combos."
             match_count++
         
         i++
@@ -129,8 +143,6 @@ if Meteor.isServer
           .toLowerCase().split('')
           .sort()
           .join('')
-        
-        #console.log "First word: " + first_word
 
         #At this point, we have a sorted array of letters for the dict word.
         j = 0
@@ -143,54 +155,43 @@ if Meteor.isServer
             .sort()
             .join('')
 
-          #console.log "Second word: " + second_word
-
           whole_word = "" +first_word + second_word + ""
             .replace(/[^A-Za-z]/g, '')
             .split('')
             .sort()
             .join('')
 
-          #console.log "Whole word is \"" + whole_word + "\""
-
           # Two arrays
           word_array = whole_word.split('').sort().join('')
-          #console.log "\"word_array\": " + word_array
-
           user_word = word.toLowerCase().split('').sort().join('')
-          #console.log "\"user_word\": " + user_word
-
 
           if word_array == user_word
-            console.log "match found, now what???"
-            console.log "\" potential_combos[i] " + potential_combos[i]
-            console.log "\" potential_combos[j] " + potential_combos[j]
+            if TESTING
+              console.log "match found:"
+              console.log "potential_combos[" + i + "] " + potential_combos[i]
+              console.log "potential_combos[" + j + "] " + potential_combos[j]
             Combos.insert
               word_1: potential_combos[i]
               word_2: potential_combos[j]
               swapped: false
           else
-            #console.log "match not found, now what???"
+            if TESTING
+              console.log "match not found, now what???"
 
-
-          #console.log "Got to here... j++ ->"
           j++
         
-        #console.log "Got to here... i++ ->"
         i++
       return
 
-    findCombinations: (word) ->
-
-      return
-     
-
+    #-- Reset page --#
     resetPage: ->
-      console.log "resetPage called - received on server side..."
+      if TESTING
+        console.log "resetPage called from client -> received on server side..."
       Anagrams.remove {}
       Subwords.remove {}
       Combos.remove {}
-      console.log "Anagrams, Subwords, and Combinations db items removed"
+      if TESTING
+        console.log "All MongoDB items removed"
       return
 
 #EOF

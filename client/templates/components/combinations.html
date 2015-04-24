@@ -1,59 +1,29 @@
 <!-- glyphicon glyphicon-refresh -->
 <template name="combinations">
   
-  {{#if userInput}}
+  
     <div class="well">
 	    <h4>
+            {{#if all_combo_items}}
+                <span id="ok" class="glyphicon glyphicon-ok"></span>
+            {{/if}}
             Combinations for "{{userInput}}" 
             <span class="badge" style="color:#7FDBFF;" id="anagramcounts">{{combosCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
         </h4> 
 	  
 	  {{#if all_combo_items}}
-	  	<span id="ok" class="glyphicon glyphicon-ok"></span>  Combinations: 
+	  	
 	  	<br>
+        <p>
 	  	{{#each all_combo_items}}
 	  	  <!-- Researching this now...-->
-				<button type="button" id="swap-btn" class="btn btn-info" aria-label="Left Align">{{this.word_1}} & {{this.word_2}} <span class="glyphicon glyphicon-refresh"> </span></button>	
+				<span class="badge">{{this.word_1}} {{this.word_2}}</span>
 	  	{{/each}}
-
+        </p>
 	  {{else}}
-	  	<p>None found</p>
+	  	<p> <span id="not-found" class="glyphicon glyphicon-remove"></span> None found</p>
 	  {{/if}}
 	 
 	</div>
-  {{/if}}
 
  </template>
-
-
-
-
-<!--
-    {{#if all_combination_items}} 
-    <h4>
-    Combinations for "{{userInput}}" 
-    <span class="badge" style="color:#7FDBFF;" id="anagramcounts">{{combinationsCount}} <span class="glyphicon glyphicon-list-alt"></span></span>
-    </h4>   
-
-    <p id="#btn-word">
-        {{#each all_combination_items}}
-        	{{#if combination_not_swapped}}
-                <button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">{{this.word1}} + {{this.word2}}</button>
-        	{{else}}
-        		<button type="button" id="btn-word" class="btn btn-default" aria-label="Left Align">{{this.word2}} + {{this.word1}}</button>
-        	{{/if}}
-        {{/each}}
-    </p>
-
-    {{else}}
-    	<p>No combiniations found found...</p>
-    {{/if}}
-
-    -->
-
-
-  	
-
-
-
-<!--<span class="glyphicon glyphicon-refresh"></span>-->

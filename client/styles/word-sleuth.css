@@ -57,6 +57,7 @@ p {
 
 a {
 	/*text-decoration: underline;*/
+	z-index: -100;
 }
 
 
@@ -71,17 +72,19 @@ a {
 	opacity: 0.95;
 }
 
+#headerArea {
+	z-index: 100;
+}
+
 #dictArea {
 	color: #FFFF33;
 }
 
 .fb-like {
 	color:white;
-
 }
 
 #btn-word {
-	
     font-size: 1em;
  	margin:5px;
 	background-color: #DEDEDE;
@@ -93,12 +96,8 @@ a {
 
 	/*background-color: #AAAAAA;*/
 	/*color:white;*/
-
 }
 
-button {
-	
-}
 
 .badge {
 	margin-top: 8px;
@@ -115,7 +114,15 @@ button {
 
 .fb-like {
 	margin-top: 10px;
+	z-index: 100;
+}
+.form-horizontal {
+	
+	text-align: left;
 }
 
+#not-found {
+	color: red;
+}
 
 

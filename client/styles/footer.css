@@ -9,17 +9,18 @@
 	height: 4em;
 	vertical-align: bottom;
 	text-align: center;
-	margin:30px;
+	margin-bottom:15px;
+	margin-top:-10px;
 
 }
 
 .copyright {
 	text-align: center;
-	color: #ff1122;
+	color: white;
 	font-size: 1.333em;
-	font-family: "Lato";
+	font-family: "Roboto";
 	font-style: bold;
-	text-shadow: 2px 2px 4px #111111;
+	
 	
 }
 

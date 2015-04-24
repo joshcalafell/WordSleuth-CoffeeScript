@@ -1,3 +1,5 @@
+aldeed:autoform@4.2.2
+aldeed:simple-schema@1.1.0
 autoupdate@1.2.1
 base64@1.0.3
 binary-heap@1.0.3
@@ -7,12 +9,14 @@ boilerplate-generator@1.0.3
 bootstrap-3@0.0.0
 bootstrap3:base@3.2.0_2
 bootstrap3:glyphicons@3.2.0_2
+bredikhin:contact-form@1.0.0
 callback-hook@1.0.3
 check@1.0.5
 coffeescript@1.0.6
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
+email@1.0.6
 fastclick@1.0.3
 geojson-utils@1.0.3
 html-tools@1.0.4
@@ -40,6 +44,7 @@ minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
 moment@0.0.0
+momentjs:moment@2.8.4
 mongo@1.1.0
 npm@0.0.0
 observe-sequence@1.0.6
