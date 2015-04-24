@@ -4,6 +4,7 @@ Template.header.rendered = function() {
     }catch(e) {}   
 };
 
+
 ShareIt.configure({
   useFB: true,          // boolean (default: true)
                       // Whether to show the Facebook button
@@ -20,3 +21,6 @@ ShareIt.configure({
 });
 
 //app id: 1057515240945312
+
+
+
