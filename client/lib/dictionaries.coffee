@@ -1,7 +1,7 @@
 ###
-* File: dictionaries.js
+* File: dictionaries.coffee
 * Author: @rabbitfighter81
-* Purpose: Javascrit for dictionary templates
+* Purpose: CoffeeScript file for dictionary templates
 ###
 
 if Meteor.isClient
