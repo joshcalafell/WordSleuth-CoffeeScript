@@ -4,12 +4,9 @@ An online anagram and sub-word finder written using Meteor, CoffeeScript, some J
 
 Navigation
 -----------
-[Word Sleuth](#wordsleuth) |
 [Purpose](#purpose) |
 [Screenshot](#screenshot) |
-[Team](#team) |
 [Licence](#licence) | 
-[TODO](#todo) 
 
 Purpose
 -------
@@ -18,17 +15,6 @@ The purpose of this app is to aid it's visitors in finding anagrams, or interest
 Screenshot
 ----------
 ![Picture](http://rabbitfighter.net/wp-content/uploads/2015/04/wordsleuth.png)
-
-
-Team (as of now...)
-----------------
-<ul>
-<li>Joshua Michael Waggoner (@rabbitfighter81)</li>
-</ul>
-
-Email
------
-Contact me: rabbitfighter@cryptolab.net
 
 Licence
 ---------
